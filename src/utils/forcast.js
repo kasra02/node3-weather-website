@@ -16,7 +16,8 @@ const forcast = (lat,long,callback) => {
                     callback("error default",undefined)
             }
         }else{
-            callback(undefined,body.current.temperature)
+            callback(undefined,`temperature:${body.current.temperature}  wind_speed:${body.current.wind_speed}`)
+
 
         }
     })
