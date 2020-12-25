@@ -12,7 +12,7 @@ weatherForm.addEventListener('submit',(e)=>{
     firstly.textContent = 'loading'
     secondly.textContent= ''
     const location = search.value
-    fetch(`http://localhost:3000/weather?address=${location}`)
+    fetch(`/weather?address=${location}`)
         .then(res=>res.json())
         .then(data=>{
             switch (data.statuscode){
@@ -24,5 +24,4 @@ weatherForm.addEventListener('submit',(e)=>{
                     search.value = ''
             }
         })
-    console.log('testing')
 })
